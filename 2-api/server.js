@@ -33,16 +33,16 @@ app.get("/suppliers", function (req, res) {
     .catch((e) => console.error(e));
 });
 
-//       app.get("/products", function (req, res) {
-//         pool
-//           .query("SELECT * FROM products")
-//           .then((result) => res.json(result.rows))
-//           .catch((e) => console.error(e));
-//       });
-//       //
-//       app.listen(3001, function () {
-//         console.log("Server is listening on port 3000. Ready to accept requests!");
-//       });
+      app.get("/products", function (req, res) {
+        pool
+          .query("SELECT * FROM products")
+          .then((result) => res.json(result.rows))
+          .catch((e) => console.error(e));
+      });
+      //
+      app.listen(3001, function () {
+        console.log("Server is listening on port 3000. Ready to accept requests!");
+      });
 
 // // - Add a new GET endpoint `/customers` to return all the customers from the database
 // // - Add a new GET endpoint `/suppliers` to return all the suppliers from the database
